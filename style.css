@@ -9,11 +9,6 @@
 }
 
 @font-face {
-    font-family: 'Gilroy-Regular';
-    src: url('./font/Gilroy-Regular.woff2');
-}
-
-@font-face {
     font-family: 'Gilroy-Semibold';
     src: url('./font/Gilroy-Semibold.woff2');
 }
@@ -26,9 +21,10 @@
 
 body {
 	scroll-behavior: smooth;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 600;
 	color: #000;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 	background: #FFF;
 }
 
@@ -38,33 +34,38 @@ img {
 }
 
 .container {
-	max-width: 1146px;
 	margin: 0 auto;
 }
 
 header {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: flex;
-    justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    margin-bottom: 95px;
 }
 
 /* Стили для логотипа и текста "GrowBe" */
 .logo-container {
+    font-family: Gilroy-Bold;
+    font-size: 24px;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.logo-container img {
-    max-height: 40px;
+/* Стили для оранжевой части текста */
+.be {
+    color: #F25822;
 }
 
-.logo-container p {
-    color: #000;
-    font-weight: bold;
+.logo-container_be {
+    font-family: Gilroy-Bold;
+    color: #F25822;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* Добавляем стили для левого блока в header */
@@ -75,6 +76,7 @@ header {
 }
 
 .header-left img {
+    max-width: 35px;
     max-height: 40px; /* Высота логотипа */
 }
 
@@ -104,25 +106,24 @@ header {
 
 /* Стили для правого блока с кнопкой "Get Started" */
 .get-started-container {
+    font-family: Gilroy-SemiBold;
+    font-size: 12px;
     margin-left: 34px; /* Размещаем справа от кнопки "Contact" на 34px */
 }
 
 .get-started-button {
     color: #fff; /* Цвет текста кнопки */
     font-weight: bold;
-    background-color: #ff5733; /* Цвет овала */
+    background-color: #F25822; /* Цвет овала */
     padding: 10px 20px; /* Размер кнопки */
-    border-radius: 50px; /* Закругление углов для создания овала */
+    border-radius: 30px; /* Закругление углов для создания овала */
     text-decoration: none;
     transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
 }
 
-.get-started-button:hover {
-    background-color: #ff884d; /* Цвет овала при наведении */
-}
-
-
 .navigation {
+    font-family: Gilroy-SemiBold;
+    font-size: 14px;
     display: flex;
     justify-content: space-between; /* Размещаем кнопки равномерно */
     align-items: center;
@@ -136,33 +137,24 @@ header {
 	line-height: 22px;
 }
 
-/* Стили для маркера "v" */
-.dropdown-marker {
-    margin-left: 5px; /* Отступ слева от маркера */
-    font-weight: bold; /* Жирный текст для маркера */
-    color: #000000; /* Цвет маркера */
+/* Стили для кнопки Home в навигационном меню */
+.navigation a:nth-child(1) {
+    color: #F25822; /* Оранжевый цвет для кнопки Home */
 }
+
+/* Стили для маркера "v" */
+/* Уменьшаем размер и растягиваем маркер */
+.dropdown-marker {
+  font-size: 0.6em; /* Меняем размер шрифта */
+  transform: scaleX(2); /* Растягиваем маркер */
+  display: inline-block; /* Обеспечиваем правильное отображение внутри текста */
+  vertical-align: middle; /* Выравниваем маркер по вертикальному центру */
+}
+
 
 /* Стили для выпадающего меню */
 .dropdown-menu {
     display: none; /* По умолчанию скрываем меню */
-    position: absolute;
-    background-color: #fff; /* Цвет фона меню */
-    border: 1px solid #ccc; /* Граница меню */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень меню */
-    list-style-type: none; /* Убираем маркеры списка */
-    padding: 10px; /* Внутренний отступ меню */
-}
-
-/* Стили для элементов меню */
-.dropdown-menu li {
-    margin-bottom: 5px; /* Отступ между элементами меню */
-}
-
-/* Стили для ссылок в меню */
-.dropdown-menu li a {
-    text-decoration: none; /* Убираем подчеркивание ссылок */
-    color: #000000; /* Цвет текста ссылок */
 }
 
 /* Показываем меню при наведении на элемент "Features" */
@@ -170,36 +162,47 @@ header {
     display: block;
 }
 
-/* Дополнительные стили для активного элемента меню (при наведении) */
-.navigation a:hover {
-    color: #ff5733; /* Изменяем цвет текста активной ссылки */
-}
-
 main {
 	margin-bottom: 197px;
 }
 
-.main-content {
-	display: flex;
-	justify-content: space-between;
+.main-content.container {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: space-between; /* Распределение элементов по горизонтали */
 }
 
 .main-content__wrapper {
 	max-width: 604px;
 }
 
-.main-content__wrapper h3 {
-	color: #3a68b8;
-	font-size: 18px;
-	line-height: 160%;
-	text-transform: uppercase;
-	margin-bottom: 10px;
+/* Стили для элипса */
+.ellipse {
+    position: relative;
+    display: inline-block;
 }
+
+.ellipse::before {
+    content: "";
+    width: 314px; 
+    height: 76px; 
+    border: 1px solid #F25822; /* Цвет оранжевой каймы */
+    border-radius: 100%; /* Превращает прямоугольник в эллипс */
+    position: absolute;
+    top: 0;
+    left: -7%; /* смещение эллипса влево или вправо */
+    z-index: -1; /* Помещает эллипс за текст */
+}
+
 .main-content__wrapper h1 {
-	font-size: 55px;
-	font-weight: 800;
-	line-height: 130%;
-	margin-bottom: 40px;
+    font-family: Gilroy-Bold;
+    font-size: 60px;
+}
+
+.main-content__wrapper h3 {
+    color: #888;
+    font-family: Gilroy-Medium;
+    font-size: 20px;
 }
 .main-content__wrapper p {
 	font-size: 18px;
@@ -211,31 +214,47 @@ main {
 
 .main-content__btn-list {
 	display: flex;
+    align-items: center;
 	gap: 20px;
-}
-
-.main-content__btn.watch {
-	display: flex;
-	gap: 10px;
-
+    font-family: Gilroy-Bold;
+    font-size: 15px;
 }
 
 .main-content__btn {
 	color: #fff;
-	font-family: 'Open Sans';
-	font-size: 20px;
-	font-weight: 600;
-	line-height: 27px;
-	padding: 15px 30px;
-	border-radius: 5px;
-	background: #3a68b8;
+	background: #F25822;
 	border: none;
-	cursor: pointer;
 }
 
-footer {
+/* Стили для кнопки "Start Now" */
+.start-btn {
+    font-weight: bold;
+    background-color: #F25822; /* Цвет овала */
+    border-radius: 50px; /* Закругление углов для создания овала */
+    width: 140px;
+    height: 50px;
+    flex-shrink: 0;
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
 }
 
+/* Стили для белой кнопки "Watch Video" */
+.watch-btn {
+    background-color: white; /* Цвет фона кнопки */
+    color: #AAAAAA; /* Цвет текста кнопки */
+    padding: 1px 30px; /* Регулируйте отступы по вашему усмотрению */
+}
+
+/* Стили для иконки play-btn */
+.play-icon-container {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    justify-content: center; /* Выравнивание по горизонтали */
+}
+
+.play-icon {
+    width: 30px; /* Размер иконки */
+}
 .logos {
 	display: flex;
 	justify-content: space-between;
