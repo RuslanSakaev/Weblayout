@@ -13,167 +13,125 @@
     src: url('./font/Gilroy-Semibold.woff2');
 }
 
+/* Сброс стилей для всех элементов */
 * {
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
+	box-sizing: border-box;
 }
 
+/* Основные стили для всей страницы */
 body {
-	scroll-behavior: smooth;
-	color: #000;
-    font-style: normal;
+    scroll-behavior: smooth;
     font-weight: 400;
-    line-height: normal;
-	background: #FFF;
+    color: #000;
+    background: #FFF;
 }
 
+/* Основные стили для изображений */
 img {
-	max-width: 100%;
-	display: block;
+    max-width: 100%;
+    display: block;
 }
 
+/* Общие стили для контейнеров */
 .container {
+	max-width: 1146px;
 	margin: 0 auto;
 }
 
+/* Стили для шапки (header) */
 header {
-    background-color: #fff;
+	padding: 50px 0;
+	margin-bottom: 95px;
+}
+
+.header-content.container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    margin-bottom: 95px;
 }
 
 /* Стили для логотипа и текста "GrowBe" */
 .logo-container {
-    font-family: Gilroy-Bold;
+    font-family: 'Gilroy-Bold';
     font-size: 24px;
     display: flex;
+    margin-right: 346px;
     align-items: center;
-    gap: 10px;
+    gap: 14px;
 }
 
-/* Стили для оранжевой части текста */
+/* Стили для оранжевой части текста "Be" */
 .be {
     color: #F25822;
 }
 
-.logo-container_be {
-    font-family: Gilroy-Bold;
-    color: #F25822;
-    font-size: 24px;
+/* Стили для навигационного меню (navigation) */
+.navigation {
+    font-family: 'Gilroy-SemiBold';
+    font-size: 14px;
     display: flex;
+    flex-grow: 1;
+    text-align: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    height: 40px; /* Увеличиваем высоту для лучшей видимости */
+    width: 100%; /* Заполняем всю доступную ширину */
 }
 
-/* Добавляем стили для левого блока в header */
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header-left img {
-    max-width: 35px;
-    max-height: 40px; /* Высота логотипа */
-}
-
-.header-left p {
-    color: #000; /* Цвет текста */
-    font-weight: bold;
-}
-
-/* Стили для блока с ссылками */
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.nav-links a {
+.navigation a {
     color: #000;
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Добавляем стили для правого блока в header */
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
-/* Стили для правого блока с кнопкой "Get Started" */
+/* Стили для кнопки "Get Started" */
 .get-started-container {
-    font-family: Gilroy-SemiBold;
+    font-family: 'Gilroy-SemiBold';
     font-size: 12px;
-    margin-left: 34px; /* Размещаем справа от кнопки "Contact" на 34px */
+    margin-left: 34px;
 }
 
 .get-started-button {
-    color: #fff; /* Цвет текста кнопки */
+    color: #fff;
     font-weight: bold;
-    background-color: #F25822; /* Цвет овала */
-    padding: 10px 20px; /* Размер кнопки */
-    border-radius: 30px; /* Закругление углов для создания овала */
-    text-decoration: none;
-    transition: background-color 0.3s ease; /* Плавное изменение цвета при наведении */
-}
-
-.navigation {
-    font-family: Gilroy-SemiBold;
-    font-size: 14px;
     display: flex;
-    justify-content: space-between; /* Размещаем кнопки равномерно */
-    align-items: center;
-    height: 17px; /* Устанавливаем высоту блока */
-    width: 533px; /* Устанавливаем ширину блока */
+    background-color: #F25822;
+    padding: 12px 27px;
+    border-radius: 30px;
+    width: 120px;
+    height: 40px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-.navigation a {
-	color: #000000;
-	font-size: 16px;
-	line-height: 22px;
-}
-
-/* Стили для кнопки Home в навигационном меню */
-.navigation a:nth-child(1) {
-    color: #F25822; /* Оранжевый цвет для кнопки Home */
-}
-
-/* Стили для маркера "v" */
 /* Уменьшаем размер и растягиваем маркер */
 .dropdown-marker {
-  font-size: 0.6em; /* Меняем размер шрифта */
-  transform: scaleX(2); /* Растягиваем маркер */
-  display: inline-block; /* Обеспечиваем правильное отображение внутри текста */
-  vertical-align: middle; /* Выравниваем маркер по вертикальному центру */
+    font-size: 0.5em; /* Меняем размер шрифта */
+    transform: scaleX(2); /* Растягиваем маркер по вертикали */
+    display: inline-block; /* Обеспечиваем правильное отображение внутри текста */
+    vertical-align: middle; /* Выравниваем маркер по вертикальному центру */
 }
 
-
-/* Стили для выпадающего меню */
-.dropdown-menu {
-    display: none; /* По умолчанию скрываем меню */
+/* Окрашиваем текст "Home" в оранжевый цвет */
+.navigation a:nth-child(1) {
+    color: #F25822;
 }
 
-/* Показываем меню при наведении на элемент "Features" */
-.navigation a:hover + .dropdown-menu {
-    display: block;
-}
-
-main {
-	margin-bottom: 197px;
-}
-
+/* Стили для основного контента (main-content) */
 .main-content.container {
     display: flex;
-    align-items: center; /* Выравнивание по вертикали */
-    justify-content: space-between; /* Распределение элементов по горизонтали */
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px; /* Уменьшаем отступ снизу */
 }
 
 .main-content__wrapper {
-	max-width: 604px;
+    max-width: 522px;
+    max-height: 222px;
+    margin-bottom: 41px;
 }
 
 /* Стили для элипса */
@@ -184,79 +142,107 @@ main {
 
 .ellipse::before {
     content: "";
-    width: 314px; 
-    height: 76px; 
-    border: 1px solid #F25822; /* Цвет оранжевой каймы */
-    border-radius: 100%; /* Превращает прямоугольник в эллипс */
+    width: 314px;
+    height: 76px;
+    border: 1px solid #F25822;
+    border-radius: 100%;
     position: absolute;
     top: 0;
-    left: -7%; /* смещение эллипса влево или вправо */
-    z-index: -1; /* Помещает эллипс за текст */
+    left: -7%;
+    z-index: -1;
 }
 
 .main-content__wrapper h1 {
-    font-family: Gilroy-Bold;
+    font-family: 'Gilroy-Bold';
     font-size: 60px;
 }
 
 .main-content__wrapper h3 {
     color: #888;
-    font-family: Gilroy-Medium;
+    font-family: 'Gilroy-Medium';
     font-size: 20px;
-}
-.main-content__wrapper p {
-	font-size: 18px;
-	line-height: 160%;
-	opacity: 0.7;
-	margin-bottom: 50px;
-	max-width: 558px;
+    margin-top: 17px;
+    margin-bottom: 37px;
+    margin-right: 56px;
 }
 
 .main-content__btn-list {
-	display: flex;
+    font-family: 'Gilroy-Bold';
+    display: flex;
     align-items: center;
-	gap: 20px;
-    font-family: Gilroy-Bold;
-    font-size: 15px;
-}
-
-.main-content__btn {
-	color: #fff;
-	background: #F25822;
-	border: none;
 }
 
 /* Стили для кнопки "Start Now" */
 .start-btn {
+    color: #fff;
+    background-color: #F25822;
+    border: none;
     font-weight: bold;
-    background-color: #F25822; /* Цвет овала */
-    border-radius: 50px; /* Закругление углов для создания овала */
+    padding: 10px 20px;
+    border-radius: 50px;
     width: 140px;
     height: 50px;
     flex-shrink: 0;
     text-decoration: none;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 /* Стили для белой кнопки "Watch Video" */
 .watch-btn {
-    background-color: white; /* Цвет фона кнопки */
-    color: #AAAAAA; /* Цвет текста кнопки */
-    padding: 1px 30px; /* Регулируйте отступы по вашему усмотрению */
+    background-color: white;
+    color: #AAAAAA;
+    border: none; /* Убираем рамку */
 }
 
 /* Стили для иконки play-btn */
 .play-icon-container {
     display: flex;
-    align-items: center; /* Выравнивание по вертикали */
-    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center;
+    justify-content: center;
+    margin-left: 27px;
+    margin-right: 15px;
 }
 
 .play-icon {
-    width: 30px; /* Размер иконки */
+    width: 30px;
+    height: 30px;
 }
-.logos {
-	display: flex;
-	justify-content: space-between;
-	padding-bottom: 100px;
+
+
+.main-img-container img {
+    max-width: 544px;
+    max-height: 375px;
+}
+
+/* Стили для подвала (footer) */
+footer {
+    background-color: #000;
+    color: #fff;
+    background-color: #FFFFFF;
+    max-height: 243px;
+    margin-top: 97px;
+    margin-bottom: 96px;
+}
+
+/* Стили для логотипов в подвале */
+.logos.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logos img {
+    max-width: 150px; /* Ограничиваем максимальную ширину логотипов */
+    max-height: 50px;
+}
+
+.logos.container img {
+    max-width: 100%; /* Заполняем по ширине контейнера */
+    height: auto; /* Сохраняем пропорции */
+    margin-right: 48px; /* Расстояние между логотипами справа */
+}
+
+/* Уберем правний отступ у последнего логотипа */
+.logos.container img:last-child {
+    margin-right: 0;
 }
