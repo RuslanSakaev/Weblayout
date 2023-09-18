@@ -310,8 +310,8 @@ header {
 /* Стили для секции "Why You Should Choose Us" */
 .why-choose-us.container {
     text-align: center;
-    margin-top: 92px; /* Отступ сверху */
     background: #FAFAFA;   
+    padding: 0;   
 
 }
 
@@ -374,3 +374,6 @@ header {
     transition: background-color 0.3s ease;
 }
 
+.page-background {
+    background: #FAFAFA; /* Задайте желаемый фоновый цвет */
+}
