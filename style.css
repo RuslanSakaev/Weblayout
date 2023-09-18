@@ -233,42 +233,30 @@ header {
     margin-right: 48px; /* Расстояние между логотипами справа */
 }
 
-/* Уберем правний отступ у последнего логотипа */
+/* Уберем правый отступ у последнего логотипа */
 .logos.container img:last-child {
     margin-right: 0;
 }
-
-/* Стили для подвала (footer) */
-/* footer {
-    background-color: #000;
-    color: #fff;
-    background-color: #FFFFFF;
-    max-height: 243px;
-    margin-top: 97px;
-    margin-bottom: 96px;
-} */
 
 /* Стили для секции с карточками функций (feature-cards) */
 .feature-cards.container {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px; /* Отступ сверху */
+    width: 1915px;
+    height: 491px;
 }
 
 .feature-card {
-    width: 30%; /* Ширина каждой карточки */
-    padding: 35px 41px 0; /* Отступы */
-    text-align: left;
+    width: 370px;
+    height: 291px;
 }
 
 .feature-icon {
-    margin-top: 25px; /* Отступ от верхней части карточки */
-    max-width: 100%;
+    padding: 40px 30px 25px; /* Отступы */
+
 }
 
 .feature-card h4 {
-    margin-top: 17px;
-    font-weight: bold;
     color: #000;
     font-family: 'Gilroy-Bold', sans-serif;
     font-size: 24px;
@@ -278,26 +266,33 @@ header {
 }
 
 .feature-card p {
-    margin-top: 25px;
+    margin-top: 17px;
+    margin-right: 50px;
     color: #AAA;
     font-family: 'Gilroy-Regular', sans-serif;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
+    
 }
 
 .feature-card a {
     margin-top: 25px;
     display: inline-block;
-    text-decoration: none;
     color: #000; /* Черный цвет текста */
     font-family: 'Gilroy-Bold', sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: 150%;
-    margin-bottom: 25px;
+}
+
+/* Стили для текста внутри карточки */
+.feature-card h4,
+.feature-card p,
+.feature-card a {
+    margin-left: 30px; /* Отступ слева внутри карточки в 30px */
 }
 
 /* Стили для центральной карточки верхнего блока */
@@ -306,12 +301,18 @@ header {
     box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
 }
 
+.page-background {
+    background: #FAFAFA; /* Задайте желаемый фоновый цвет */
+}
 
 /* Стили для секции "Why You Should Choose Us" */
 .why-choose-us.container {
     text-align: center;
     background: #FAFAFA;   
-    padding: 0;   
+    padding-top: 92px;   
+    width: 1920px;
+    height: 919px;
+    flex-shrink: 0;
 
 }
 
@@ -326,8 +327,11 @@ header {
 
 .why-choose-us p {
     margin-top: 19px;
+    max-width: 682px;
     color: #666;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Gilroy-Regular', sans-serif;
     font-size: 16px;
     font-style: normal;
@@ -338,16 +342,6 @@ header {
 /* Стили для карточек с картинками */
 .feature-card.learn-more-button {
     margin-top: 295px;
-}
-
-.feature-card h4 {
-    margin-top: 22px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.feature-card p {
-    margin-top: 39px;
 }
 
 /* Стили для контейнера карточек */
@@ -374,6 +368,14 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.page-background {
-    background: #FAFAFA; /* Задайте желаемый фоновый цвет */
-}
+
+
+/* Стили для подвала (footer) */
+/* footer {
+    background-color: #000;
+    color: #fff;
+    background-color: #FFFFFF;
+    max-height: 243px;
+    margin-top: 97px;
+    margin-bottom: 96px;
+} */
